@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const notificationController = require('../controllers/notificationController');
 const { authenticateUser } = require('../middleware/authMiddleware');
+console.log('authenticateUser:', authenticateUser);
 
 // Send notification to specific users
 router.post('/send', authenticateUser, async (req, res) => {
