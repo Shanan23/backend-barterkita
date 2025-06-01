@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# This script automates the deployment of a Dockerized application.
+echo "Starting deployment process..."
+git pull
+
 # Build the Docker image
 echo "Building Docker image..."
 npm run docker:build
