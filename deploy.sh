@@ -4,9 +4,9 @@
 echo "Starting deployment process..."
 git pull
 
-# Build the Docker image
-echo "Building Docker image..."
-docker build -t backend-barterkita:latest .
+# Build the Docker image with no cache
+echo "Building Docker image with no cache..."
+docker build --no-cache -t backend-barterkita:latest .
 
 # Stop and remove existing containers
 echo "Stopping and removing existing containers..."
