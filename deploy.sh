@@ -6,16 +6,16 @@ git pull
 
 # Build the Docker image
 echo "Building Docker image..."
-npm run docker:build
+docker build -t backend-barterkita:latest .
 
 # Stop and remove existing containers
 echo "Stopping and removing existing containers..."
-npm run docker:down
+docker-compose down
 
 # Start containers in detached mode
 echo "Starting containers..."
-npm run docker:up
+docker-compose up -d
 
 # Show logs
 echo "Showing container logs..."
-npm run docker:logs
+docker-compose logs -f backend-barterkita
