@@ -2,7 +2,10 @@ version: '3'
 
 services:
   backend-barterkita:
-    build: .
+    container_name: backend-barterkita
+    build: 
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "3999:3999"
     environment:
@@ -10,8 +13,8 @@ services:
       - PORT=3999
     restart: unless-stopped
     networks:
-      - mynetwork
+      - shared-network
 
 networks:
-  mynetwork:
-    driver: bridge
+  shared-network:
+    external: true

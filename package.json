@@ -17,14 +17,15 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google-cloud/firestore": "^6.7.0",
+    "@googlemaps/google-maps-services-js": "^3.3.41",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
-    "firebase-admin": "^13.4.0",
-    "@google-cloud/firestore": "^6.7.0",
-    "@googlemaps/google-maps-services-js": "^3.3.41",
     "express-validator": "^7.0.1",
+    "firebase": "^11.8.1",
+    "firebase-admin": "^13.4.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^4.6.3"
   },
