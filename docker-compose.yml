@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  backend-barterkita:
+    build: .
+    ports:
+      - "3999:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
