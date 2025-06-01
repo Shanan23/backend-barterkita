@@ -1,11 +1,17 @@
-version: '3.8'
+version: '3'
 
 services:
   backend-barterkita:
     build: .
     ports:
-      - "3999:3000"
+      - "3999:3999"
     environment:
       - NODE_ENV=production
-      - PORT=3000
+      - PORT=3999
     restart: unless-stopped
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
